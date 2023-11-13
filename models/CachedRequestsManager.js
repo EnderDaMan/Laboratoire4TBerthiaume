@@ -78,7 +78,7 @@ export default class CachedRequestManager{
        for(let endpoint of CashedRquests){
             if(endpoint.url == HttpContext.req.url){
                 HttpContext.response.JSON(HttpContext.payload, endpoint.ETag, true);
-                console.log("CashedRequests get successful for " + endpoint.url);
+                console.log("CashedRequests get successful for " + endpoint.url + "," + HttpContext.req.url);
             }      
        }
     }
