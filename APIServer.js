@@ -23,10 +23,6 @@ export default class APIServer {
         this.middlewaresPipeline.add(handleCORSPreflight);
         this.middlewaresPipeline.add(handleStaticResourceRequest);
 
-        // ADDITION labo 4
-
-        this.middlewaresPipeline.add(CachedRequestManager.get);
-
         // API middlewares
 
         this.middlewaresPipeline.add(router.API_EndPoint);
