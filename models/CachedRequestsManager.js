@@ -9,7 +9,7 @@ export default class CachedRequestManager{
     static add(url, content, ETag = ""){
         /*mise en cache*/
         if (url != "") {
-            CachedRequestManager.clear(model);
+            CachedRequestManager.clear(url);
             CashedRquests.push({
                 url,
                 content,
