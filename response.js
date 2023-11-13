@@ -5,7 +5,7 @@
 // Lionel-Groulx College
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-import CachedRequestManager from "./models/CachedRequestsManager";
+import CachedRequestManager from "./models/CachedRequestsManager.js";
 
 export default class Response {
     constructor(HttpContext) {
