@@ -84,5 +84,5 @@ export default class CachedRequestManager{
     }
 }
 /*(Inspirez-vous de la classe RepositoryCachesManager)*/
-setInterval(CachedRequestManager.flushExpired, cashedRquestsExpirationTime * 1000);
+//setInterval(CachedRequestManager.flushExpired, cashedRquestsExpirationTime * 1000);
 log(BgWhite, FgBlack, "Periodic repository caches cleaning process started...");
