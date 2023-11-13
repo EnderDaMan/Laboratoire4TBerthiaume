@@ -29,7 +29,7 @@ export default class CachedRequestManager{
                         // renew cache
                         endpoint.Expire_Time = utilities.nowInSeconds() + cashedRquestsExpirationTime;
                         console.log(url + " retreived from requests cache");
-                        return endpoint.data;
+                        return endpoint.content;
                     }
                 }
             }
@@ -76,7 +76,7 @@ export default class CachedRequestManager{
                 Note: Show on console->
         */
        for(let endpoint of CashedRquests){
-            console.log(endpoint.url);
+            console.log("TEST");
             if(endpoint.url == HttpContext.req.url){
                 HttpContext.response.JSON(HttpContext.payload, endpoint.ETag, true);
                 console.log("CashedRequests get successful for " + endpoint.url + "," + HttpContext.req.url);
