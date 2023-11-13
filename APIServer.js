@@ -25,7 +25,7 @@ export default class APIServer {
 
         // ADDITION labo 4
 
-        this.middlewaresPipeline.add(CachedRequestManager.get);
+        
 
         // API middlewares
 
