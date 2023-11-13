@@ -16,7 +16,7 @@ export default class CachedRequestManager{
                 ETag,
                 Expire_Time: utilities.nowInSeconds() + cashedRquestsExpirationTime
             });
-            console.log(url + " added to the requests cashe");
+            console.log(url + " added to the requests cache");
         }
     }
 

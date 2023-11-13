@@ -47,7 +47,7 @@ export default class Response {
         if (jsonObj != null) {
             let content = JSON.stringify(jsonObj);
             //ADDITION
-            if(!fromCache){
+            if(!fromCache && this.HttpContext.req.url.startsWith("/api/")){
                 CachedRequestManager.add(this.HttpContext.req.url, content, ETag);
             }
             return this.end(content);
