@@ -26,6 +26,10 @@ export default class APIServer {
         // API middlewares
 
         this.middlewaresPipeline.add(router.API_EndPoint);
+
+        // ADDITION labo 4
+
+        this.middlewaresPipeline.add(CachedRequestManager.get);
     }
     async handleHttpRequest(req, res) {
         this.markRequestProcessStartTime();
