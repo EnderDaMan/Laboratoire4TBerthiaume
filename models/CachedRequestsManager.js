@@ -1,3 +1,4 @@
+import * as serverVariables from "../serverVariables.js";
 let cashedRquestsExpirationTime = serverVariables.get("main.repository.CacheExpirationTime");
 
 // Repository file data models cache
