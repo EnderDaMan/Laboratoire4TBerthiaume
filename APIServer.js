@@ -23,13 +23,13 @@ export default class APIServer {
         this.middlewaresPipeline.add(handleCORSPreflight);
         this.middlewaresPipeline.add(handleStaticResourceRequest);
 
-        // API middlewares
-
-        this.middlewaresPipeline.add(router.API_EndPoint);
-
         // ADDITION labo 4
 
         this.middlewaresPipeline.add(CachedRequestManager.get);
+
+        // API middlewares
+
+        this.middlewaresPipeline.add(router.API_EndPoint);
     }
     async handleHttpRequest(req, res) {
         this.markRequestProcessStartTime();
